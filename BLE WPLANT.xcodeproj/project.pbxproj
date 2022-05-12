@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC3C0EE82805B2C000742F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0EE72805B2C000742F24 /* AppDelegate.swift */; };
+		FC3C0EEA2805B2C000742F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0EE92805B2C000742F24 /* SceneDelegate.swift */; };
+		FC3C0EEC2805B2C000742F24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0EEB2805B2C000742F24 /* ViewController.swift */; };
+		FC3C0EEF2805B2C000742F24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3C0EED2805B2C000742F24 /* Main.storyboard */; };
+		FC3C0EF12805B2C100742F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3C0EF02805B2C100742F24 /* Assets.xcassets */; };
+		FC3C0EF42805B2C100742F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3C0EF22805B2C100742F24 /* LaunchScreen.storyboard */; };
+		FC3C0EFF2805B2C200742F24 /* watchpstoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0EFE2805B2C200742F24 /* watchpstoryboardTests.swift */; };
+		FC3C0F092805B2C200742F24 /* watchpstoryboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0F082805B2C200742F24 /* watchpstoryboardUITests.swift */; };
+		FC3C0F0B2805B2C200742F24 /* watchpstoryboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C0F0A2805B2C200742F24 /* watchpstoryboardUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC3C0EFB2805B2C200742F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3C0EDC2805B2C000742F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3C0EE32805B2C000742F24;
+			remoteInfo = watchpstoryboard;
+		};
+		FC3C0F052805B2C200742F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3C0EDC2805B2C000742F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3C0EE32805B2C000742F24;
+			remoteInfo = watchpstoryboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE WPLANT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3C0EE72805B2C000742F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC3C0EE92805B2C000742F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC3C0EEB2805B2C000742F24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC3C0EEE2805B2C000742F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC3C0EF02805B2C100742F24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC3C0EF32805B2C100742F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC3C0EF52805B2C100742F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3C0EFA2805B2C200742F24 /* BLE WPLANTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BLE WPLANTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3C0EFE2805B2C200742F24 /* watchpstoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchpstoryboardTests.swift; sourceTree = "<group>"; };
+		FC3C0F042805B2C200742F24 /* BLE WPLANTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BLE WPLANTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3C0F082805B2C200742F24 /* watchpstoryboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchpstoryboardUITests.swift; sourceTree = "<group>"; };
+		FC3C0F0A2805B2C200742F24 /* watchpstoryboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchpstoryboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC3C0EE12805B2C000742F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3C0EF72805B2C200742F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3C0F012805B2C200742F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC3C0EDB2805B2C000742F24 = {
+			isa = PBXGroup;
+			children = (
+				FC3C0EE62805B2C000742F24 /* watchpstoryboard */,
+				FC3C0EFD2805B2C200742F24 /* watchpstoryboardTests */,
+				FC3C0F072805B2C200742F24 /* watchpstoryboardUITests */,
+				FC3C0EE52805B2C000742F24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC3C0EE52805B2C000742F24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */,
+				FC3C0EFA2805B2C200742F24 /* BLE WPLANTTests.xctest */,
+				FC3C0F042805B2C200742F24 /* BLE WPLANTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC3C0EE62805B2C000742F24 /* watchpstoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C0EE72805B2C000742F24 /* AppDelegate.swift */,
+				FC3C0EE92805B2C000742F24 /* SceneDelegate.swift */,
+				FC3C0EEB2805B2C000742F24 /* ViewController.swift */,
+				FC3C0EED2805B2C000742F24 /* Main.storyboard */,
+				FC3C0EF02805B2C100742F24 /* Assets.xcassets */,
+				FC3C0EF22805B2C100742F24 /* LaunchScreen.storyboard */,
+				FC3C0EF52805B2C100742F24 /* Info.plist */,
+			);
+			path = watchpstoryboard;
+			sourceTree = "<group>";
+		};
+		FC3C0EFD2805B2C200742F24 /* watchpstoryboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C0EFE2805B2C200742F24 /* watchpstoryboardTests.swift */,
+			);
+			path = watchpstoryboardTests;
+			sourceTree = "<group>";
+		};
+		FC3C0F072805B2C200742F24 /* watchpstoryboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C0F082805B2C200742F24 /* watchpstoryboardUITests.swift */,
+				FC3C0F0A2805B2C200742F24 /* watchpstoryboardUITestsLaunchTests.swift */,
+			);
+			path = watchpstoryboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC3C0EE32805B2C000742F24 /* BLE WPLANT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3C0F0E2805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANT" */;
+			buildPhases = (
+				FC3C0EE02805B2C000742F24 /* Sources */,
+				FC3C0EE12805B2C000742F24 /* Frameworks */,
+				FC3C0EE22805B2C000742F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BLE WPLANT";
+			productName = watchpstoryboard;
+			productReference = FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC3C0EF92805B2C200742F24 /* BLE WPLANTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3C0F112805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTTests" */;
+			buildPhases = (
+				FC3C0EF62805B2C200742F24 /* Sources */,
+				FC3C0EF72805B2C200742F24 /* Frameworks */,
+				FC3C0EF82805B2C200742F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3C0EFC2805B2C200742F24 /* PBXTargetDependency */,
+			);
+			name = "BLE WPLANTTests";
+			productName = watchpstoryboardTests;
+			productReference = FC3C0EFA2805B2C200742F24 /* BLE WPLANTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC3C0F032805B2C200742F24 /* BLE WPLANTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3C0F142805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTUITests" */;
+			buildPhases = (
+				FC3C0F002805B2C200742F24 /* Sources */,
+				FC3C0F012805B2C200742F24 /* Frameworks */,
+				FC3C0F022805B2C200742F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3C0F062805B2C200742F24 /* PBXTargetDependency */,
+			);
+			name = "BLE WPLANTUITests";
+			productName = watchpstoryboardUITests;
+			productReference = FC3C0F042805B2C200742F24 /* BLE WPLANTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC3C0EDC2805B2C000742F24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					FC3C0EE32805B2C000742F24 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					FC3C0EF92805B2C200742F24 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = FC3C0EE32805B2C000742F24;
+					};
+					FC3C0F032805B2C200742F24 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = FC3C0EE32805B2C000742F24;
+					};
+				};
+			};
+			buildConfigurationList = FC3C0EDF2805B2C000742F24 /* Build configuration list for PBXProject "BLE WPLANT" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC3C0EDB2805B2C000742F24;
+			productRefGroup = FC3C0EE52805B2C000742F24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC3C0EE32805B2C000742F24 /* BLE WPLANT */,
+				FC3C0EF92805B2C200742F24 /* BLE WPLANTTests */,
+				FC3C0F032805B2C200742F24 /* BLE WPLANTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC3C0EE22805B2C000742F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3C0EF42805B2C100742F24 /* LaunchScreen.storyboard in Resources */,
+				FC3C0EF12805B2C100742F24 /* Assets.xcassets in Resources */,
+				FC3C0EEF2805B2C000742F24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3C0EF82805B2C200742F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3C0F022805B2C200742F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC3C0EE02805B2C000742F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3C0EEC2805B2C000742F24 /* ViewController.swift in Sources */,
+				FC3C0EE82805B2C000742F24 /* AppDelegate.swift in Sources */,
+				FC3C0EEA2805B2C000742F24 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3C0EF62805B2C200742F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3C0EFF2805B2C200742F24 /* watchpstoryboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3C0F002805B2C200742F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3C0F0B2805B2C200742F24 /* watchpstoryboardUITestsLaunchTests.swift in Sources */,
+				FC3C0F092805B2C200742F24 /* watchpstoryboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC3C0EFC2805B2C200742F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3C0EE32805B2C000742F24 /* BLE WPLANT */;
+			targetProxy = FC3C0EFB2805B2C200742F24 /* PBXContainerItemProxy */;
+		};
+		FC3C0F062805B2C200742F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3C0EE32805B2C000742F24 /* BLE WPLANT */;
+			targetProxy = FC3C0F052805B2C200742F24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC3C0EED2805B2C000742F24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC3C0EEE2805B2C000742F24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC3C0EF22805B2C100742F24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC3C0EF32805B2C100742F24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC3C0F0C2805B2C200742F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC3C0F0D2805B2C200742F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3C0F0F2805B2C200742F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W577VJ22X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = watchpstoryboard/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = watchplantnative.watchpstoryboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC3C0F102805B2C200742F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W577VJ22X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = watchpstoryboard/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = watchplantnative.watchpstoryboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC3C0F122805B2C200742F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W577VJ22X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = watchplantnative.watchpstoryboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLE WPLANT.app/BLE WPLANT";
+			};
+			name = Debug;
+		};
+		FC3C0F132805B2C200742F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W577VJ22X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = watchplantnative.watchpstoryboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLE WPLANT.app/BLE WPLANT";
+			};
+			name = Release;
+		};
+		FC3C0F152805B2C200742F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W577VJ22X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = watchplantnative.watchpstoryboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = watchpstoryboard;
+			};
+			name = Debug;
+		};
+		FC3C0F162805B2C200742F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W577VJ22X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = watchplantnative.watchpstoryboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = watchpstoryboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC3C0EDF2805B2C000742F24 /* Build configuration list for PBXProject "BLE WPLANT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3C0F0C2805B2C200742F24 /* Debug */,
+				FC3C0F0D2805B2C200742F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3C0F0E2805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3C0F0F2805B2C200742F24 /* Debug */,
+				FC3C0F102805B2C200742F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3C0F112805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3C0F122805B2C200742F24 /* Debug */,
+				FC3C0F132805B2C200742F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3C0F142805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3C0F152805B2C200742F24 /* Debug */,
+				FC3C0F162805B2C200742F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC3C0EDC2805B2C000742F24 /* Project object */;
+}
