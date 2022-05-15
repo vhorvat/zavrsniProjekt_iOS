@@ -16,20 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eW2-V6-rwS">
-                                <rect key="frame" x="0.0" y="575" width="414" height="271"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="krR-SO-XLA">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="krR-SO-XLA" id="zLV-A3-0d8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="Y5H-dQ-y56">
                                 <rect key="frame" x="29" y="221" width="100" height="100"/>
                                 <constraints>
@@ -44,8 +30,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLE PLANT MONITOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFI-wT-aKd">
-                                <rect key="frame" x="53" y="66" width="309" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WATCHPLANT_AI_TEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFI-wT-aKd">
+                                <rect key="frame" x="46" y="66" width="324" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -58,7 +44,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutno aktivni senzor:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpP-cS-BfC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current bluetooth status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpP-cS-BfC">
                                 <rect key="frame" x="20" y="160" width="225" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -94,13 +80,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trenutno dostupni senzori:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVZ-Jh-Uop">
-                                <rect key="frame" x="15" y="586" width="239" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="null" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgz-PG-jYu">
                                 <rect key="frame" x="325" y="380" width="62" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,17 +100,12 @@
                         <constraints>
                             <constraint firstItem="Y5H-dQ-y56" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-128" id="4DE-20-Mbg"/>
                             <constraint firstItem="Y5H-dQ-y56" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-177" id="Eej-If-OXz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eW2-V6-rwS" secondAttribute="trailing" id="Li7-A1-wbw"/>
-                            <constraint firstItem="eW2-V6-rwS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M5X-PO-25x"/>
-                            <constraint firstItem="eW2-V6-rwS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="575" id="RVV-c9-ZvZ"/>
-                            <constraint firstAttribute="bottom" secondItem="eW2-V6-rwS" secondAttribute="bottom" constant="50" id="l9z-cf-f7s"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="humidityToShowLabel" destination="xgz-PG-jYu" id="Da0-u4-zim"/>
                         <outlet property="nameToShowLabel" destination="Ddo-OF-5in" id="k7c-7O-Rvn"/>
                         <outlet property="pressureToShowLabel" destination="ABz-Tb-zPs" id="CtM-QU-Ih1"/>
-                        <outlet property="tableView" destination="eW2-V6-rwS" id="H06-pq-UKl"/>
                         <outlet property="temperatureToShowLabel" destination="805-IG-bS9" id="PYn-rS-Eem"/>
                     </connections>
                 </viewController>
