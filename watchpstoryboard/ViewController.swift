@@ -19,7 +19,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     let notifCenter = UNUserNotificationCenter.current()
     var allBluetoothPeripherals = [CBPeripheral]()
     
-    let arrayOfServices: [CBUUID] = [CBUUID(string:"1414")]
+    let arrayOfServices: [CBUUID] = [CBUUID(string:"5701")]
     let arrayOfProbabilities = ["No stimulus", "Wind", "Temperature", "Blue light", "Red light"]
     
     func scheduleNotification(){
@@ -30,7 +30,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let uuidString = UUID().uuidString
-        
         let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
         notifCenter.add(request) { (error) in
                 }
@@ -61,7 +60,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if let pname = peripheral.name {
             deviceNames.append(pname)
-            centralManager.stopScan()
             centralManager.connect(peripheral, options: nil)
             allBluetoothPeripherals.append(peripheral)
             scheduleNotification()
@@ -69,7 +67,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        nameToShowLabel.text="CONNECTED"
+        nameToShowLabel.text="Connected"
         peripheral.delegate = self
         peripheral.discoverServices(nil)
     }
@@ -94,8 +92,19 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             value = value << 8
             value = value | Int(byte)
         }
-        rawDataLabel.text = String(value) //NEED EDIT
-        interpretedDataLabel.text = arrayOfProbabilities[2] //NEED EDIT
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component (.second, from: date)
+        rawDataLabel.text = String(hour)+":"+String(minutes)+":"+String(seconds) //NEED EDIT
+        interpretedDataLabel.text = arrayOfProbabilities[value] //NEED EDIT
+        
+    }
+    
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        nameToShowLabel.text="Disconnected"
+        central.scanForPeripherals(withServices: arrayOfServices, options: nil)
         
     }
 
