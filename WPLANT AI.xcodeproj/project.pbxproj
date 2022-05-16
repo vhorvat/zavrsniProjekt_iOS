@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE WPLANT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3C0EE42805B2C000742F24 /* WPLANT AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WPLANT AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3C0EE72805B2C000742F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3C0EE92805B2C000742F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FC3C0EEB2805B2C000742F24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,9 +44,9 @@
 		FC3C0EF02805B2C100742F24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3C0EF32805B2C100742F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3C0EF52805B2C100742F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC3C0EFA2805B2C200742F24 /* BLE WPLANTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BLE WPLANTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3C0EFA2805B2C200742F24 /* WPLANT AITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WPLANT AITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3C0EFE2805B2C200742F24 /* watchpstoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchpstoryboardTests.swift; sourceTree = "<group>"; };
-		FC3C0F042805B2C200742F24 /* BLE WPLANTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BLE WPLANTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3C0F042805B2C200742F24 /* WPLANT AIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WPLANT AIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3C0F082805B2C200742F24 /* watchpstoryboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchpstoryboardUITests.swift; sourceTree = "<group>"; };
 		FC3C0F0A2805B2C200742F24 /* watchpstoryboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchpstoryboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,9 +89,9 @@
 		FC3C0EE52805B2C000742F24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */,
-				FC3C0EFA2805B2C200742F24 /* BLE WPLANTTests.xctest */,
-				FC3C0F042805B2C200742F24 /* BLE WPLANTUITests.xctest */,
+				FC3C0EE42805B2C000742F24 /* WPLANT AI.app */,
+				FC3C0EFA2805B2C200742F24 /* WPLANT AITests.xctest */,
+				FC3C0F042805B2C200742F24 /* WPLANT AIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC3C0EE32805B2C000742F24 /* BLE WPLANT */ = {
+		FC3C0EE32805B2C000742F24 /* WPLANT AI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3C0F0E2805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANT" */;
+			buildConfigurationList = FC3C0F0E2805B2C200742F24 /* Build configuration list for PBXNativeTarget "WPLANT AI" */;
 			buildPhases = (
 				FC3C0EE02805B2C000742F24 /* Sources */,
 				FC3C0EE12805B2C000742F24 /* Frameworks */,
@@ -142,14 +142,14 @@
 			);
 			dependencies = (
 			);
-			name = "BLE WPLANT";
+			name = "WPLANT AI";
 			productName = watchpstoryboard;
-			productReference = FC3C0EE42805B2C000742F24 /* BLE WPLANT.app */;
+			productReference = FC3C0EE42805B2C000742F24 /* WPLANT AI.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC3C0EF92805B2C200742F24 /* BLE WPLANTTests */ = {
+		FC3C0EF92805B2C200742F24 /* WPLANT AITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3C0F112805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTTests" */;
+			buildConfigurationList = FC3C0F112805B2C200742F24 /* Build configuration list for PBXNativeTarget "WPLANT AITests" */;
 			buildPhases = (
 				FC3C0EF62805B2C200742F24 /* Sources */,
 				FC3C0EF72805B2C200742F24 /* Frameworks */,
@@ -160,14 +160,14 @@
 			dependencies = (
 				FC3C0EFC2805B2C200742F24 /* PBXTargetDependency */,
 			);
-			name = "BLE WPLANTTests";
+			name = "WPLANT AITests";
 			productName = watchpstoryboardTests;
-			productReference = FC3C0EFA2805B2C200742F24 /* BLE WPLANTTests.xctest */;
+			productReference = FC3C0EFA2805B2C200742F24 /* WPLANT AITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FC3C0F032805B2C200742F24 /* BLE WPLANTUITests */ = {
+		FC3C0F032805B2C200742F24 /* WPLANT AIUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3C0F142805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTUITests" */;
+			buildConfigurationList = FC3C0F142805B2C200742F24 /* Build configuration list for PBXNativeTarget "WPLANT AIUITests" */;
 			buildPhases = (
 				FC3C0F002805B2C200742F24 /* Sources */,
 				FC3C0F012805B2C200742F24 /* Frameworks */,
@@ -178,9 +178,9 @@
 			dependencies = (
 				FC3C0F062805B2C200742F24 /* PBXTargetDependency */,
 			);
-			name = "BLE WPLANTUITests";
+			name = "WPLANT AIUITests";
 			productName = watchpstoryboardUITests;
-			productReference = FC3C0F042805B2C200742F24 /* BLE WPLANTUITests.xctest */;
+			productReference = FC3C0F042805B2C200742F24 /* WPLANT AIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC3C0EDF2805B2C000742F24 /* Build configuration list for PBXProject "BLE WPLANT" */;
+			buildConfigurationList = FC3C0EDF2805B2C000742F24 /* Build configuration list for PBXProject "WPLANT AI" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +219,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC3C0EE32805B2C000742F24 /* BLE WPLANT */,
-				FC3C0EF92805B2C200742F24 /* BLE WPLANTTests */,
-				FC3C0F032805B2C200742F24 /* BLE WPLANTUITests */,
+				FC3C0EE32805B2C000742F24 /* WPLANT AI */,
+				FC3C0EF92805B2C200742F24 /* WPLANT AITests */,
+				FC3C0F032805B2C200742F24 /* WPLANT AIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		FC3C0EFC2805B2C200742F24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC3C0EE32805B2C000742F24 /* BLE WPLANT */;
+			target = FC3C0EE32805B2C000742F24 /* WPLANT AI */;
 			targetProxy = FC3C0EFB2805B2C200742F24 /* PBXContainerItemProxy */;
 		};
 		FC3C0F062805B2C200742F24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC3C0EE32805B2C000742F24 /* BLE WPLANT */;
+			target = FC3C0EE32805B2C000742F24 /* WPLANT AI */;
 			targetProxy = FC3C0F052805B2C200742F24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -502,7 +502,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLE WPLANT.app/BLE WPLANT";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WPLANT AI.app/WPLANT AI";
 			};
 			name = Debug;
 		};
@@ -522,7 +522,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLE WPLANT.app/BLE WPLANT";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WPLANT AI.app/WPLANT AI";
 			};
 			name = Release;
 		};
@@ -565,7 +565,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC3C0EDF2805B2C000742F24 /* Build configuration list for PBXProject "BLE WPLANT" */ = {
+		FC3C0EDF2805B2C000742F24 /* Build configuration list for PBXProject "WPLANT AI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3C0F0C2805B2C200742F24 /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3C0F0E2805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANT" */ = {
+		FC3C0F0E2805B2C200742F24 /* Build configuration list for PBXNativeTarget "WPLANT AI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3C0F0F2805B2C200742F24 /* Debug */,
@@ -583,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3C0F112805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTTests" */ = {
+		FC3C0F112805B2C200742F24 /* Build configuration list for PBXNativeTarget "WPLANT AITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3C0F122805B2C200742F24 /* Debug */,
@@ -592,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3C0F142805B2C200742F24 /* Build configuration list for PBXNativeTarget "BLE WPLANTUITests" */ = {
+		FC3C0F142805B2C200742F24 /* Build configuration list for PBXNativeTarget "WPLANT AIUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3C0F152805B2C200742F24 /* Debug */,
