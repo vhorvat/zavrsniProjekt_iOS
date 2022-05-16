@@ -75,8 +75,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        print("DEBUG: DEVICE SCANNED")
-        print ("Services:\(String(describing : peripheral.services))")
         if let services = peripheral.services {
             for service in services {
                 peripheral.discoverCharacteristics(nil, for: service)
@@ -90,8 +88,13 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        let value = [UInt8] (characteristic.value!)
-        rawDataLabel.text = "NEED EDIT" //NEED EDIT
+        var array = [UInt8] (characteristic.value!)
+        var value : Int = 0
+        for byte in array {
+            value = value << 8
+            value = value | Int(byte)
+        }
+        rawDataLabel.text = String(value) //NEED EDIT
         interpretedDataLabel.text = arrayOfProbabilities[2] //NEED EDIT
         
     }
