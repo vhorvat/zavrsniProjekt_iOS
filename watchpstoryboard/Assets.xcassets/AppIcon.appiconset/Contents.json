@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "W1-2.png",
+      "filename" : "w40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "W1-1.png",
+      "filename" : "w60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
