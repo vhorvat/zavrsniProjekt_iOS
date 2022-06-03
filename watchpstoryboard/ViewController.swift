@@ -14,16 +14,24 @@ import Foundation
 
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView1: UITableView!
+    @IBOutlet weak var tableView2: UITableView!
+    
+    var allData = ["","","","","","","","","","","","","","","","",""]
     var deviceNames = [String]()
     var centralManager: CBCentralManager!
     var myPeripheral: CBPeripheral!
+    var wPeripheral: CBPeripheral!
+    var wCharacteristic: CBCharacteristic!
+    
+    
     let notifCenter = UNUserNotificationCenter.current()
     var allBluetoothPeripherals = [CBPeripheral]()
     
-    let arrayOfServices: [CBUUID] = [CBUUID(string: "0x180A")]
+    let arrayOfServices: [CBUUID] = [CBUUID(string: "5701")]
     
     var currentConnectedName = "NULL"
+    var stateOfDoors = "1"
     var currentTemperature = 0
     
     
@@ -51,8 +59,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         else {
             print("BLE PROBLEM")
             currentConnectedName="Error"
-            
-
+        
         }
     }
     
@@ -61,7 +68,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print (pname)
             deviceNames.append(pname)
             allBluetoothPeripherals.append(peripheral)
-            self.tableView.reloadData()
+            self.tableView1.reloadData()
             scheduleNotification()
             print(deviceNames)
         }
@@ -83,53 +90,121 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         print("Uređaj:\(peripheral) i servis na njemu: \(service)")
-        //for charasteristic in service.characteristics! {
-          //  print("KARAKTERISTIKA")
-            //peripheral.setNotifyValue(true, for: charasteristic)
-            //print(peripheral.readValue(for: charasteristic))
-        //}
-        print(peripheral.readValue(for: service.characteristics![0]))
-
-        
+        for charasteristic in service.characteristics! {
+            if (charasteristic.uuid) == CBUUID(string: "EBCB181A-E01F-11EC-9D64-0242AC120002"){
+                peripheral.setNotifyValue(true, for: charasteristic)
+            }
+            if (charasteristic.uuid) == CBUUID(string: "FA2AF5EC-E01F-11EC-9D64-0242AC120002"){
+                print("I WROTE")
+                wPeripheral=peripheral
+                wCharacteristic=charasteristic
+                peripheral.writeValue(stateOfDoors.data(using: .utf8)!, for: charasteristic, type: .withoutResponse)
+            }
+        }
         
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        let currentValue=characteristic.value
-        print(characteristic.service)
-        let value = [UInt8] (characteristic.value!)
-        print("Trenutna vrijednost DEBUG RAW GATT DATA:\(currentValue)")
-        let newValue = ((Int16(value[0])))
-        let newHumidValue = ((Int16(value[1])))
-        let intValue = Int(newValue)
-        print("Trenutna vrijednost DEBUG DECOUPLE:\(intValue)")
-        let interestedInValue=intValue
-        print("Trenutna vrijednost DEBUG DECODE:\(interestedInValue)")
-        print("Samo Humidty debuged:\(newHumidValue)")
-        let newPressureValue1 = ((Int16(value[2])))
-        let fixedPressureValue = "10" + String(newPressureValue1)
-        currentTemperature = interestedInValue
-        temperatureToShowLabel.text = String(interestedInValue) + " °C"
-        humidityToShowLabel.text = String(newHumidValue) + " %"
-        pressureToShowLabel.text = String(fixedPressureValue) + " hPa"
+        if (characteristic.uuid) == CBUUID(string: "EBCB181A-E01F-11EC-9D64-0242AC120002"){
+            let currentValue = characteristic.value
+            let decodedString = String(bytes: currentValue!, encoding: .utf8)
+            let dataArray = decodedString!.components(separatedBy: ",")
+            let timestamp = dataArray[0]
+            let tempPCB = Double(dataArray[1])!/10000
+            let magX = Double(dataArray[2])!/1000
+            let magY = Double(dataArray[3])!/1000
+            let magZ = Double(dataArray[4])!/1000
+            let tempExternal = Double(dataArray[5])!/10000
+            let lightExternal = Double(dataArray[6])!/799.4 - 0.75056
+            let humidityExternalTemp = Double(dataArray[7])!
+            let humidityExternal = (humidityExternalTemp*3/4200000-0.1515)/(0.006707256-0.0000137376*(tempExternal/10000))
+            let differentialPotentialCH1 = dataArray[8]
+            let differentialPotentialCH2 = dataArray[9]
+            let RFpowerEmission = dataArray[10]
+            let transpiration = Double(dataArray[11])!/1000
+            let airPressure = Double(dataArray[12])!/100
+            let soilMoisture = dataArray[13]
+            let soilTemperature = Double(dataArray[14])!/10
+            let mu_mm = dataArray[15]
+            let mu_id = dataArray[16]
+            let sensorname = dataArray[17]
+            
+            self.allData[0] = String("Timestamp: \(timestamp) °C")
+            self.allData[1] = String("TempPCB: \(tempPCB) °C")
+            self.allData[2] = String("MagX: \(magX) G")
+            self.allData[3] = String("MagY: \(magY) G")
+            self.allData[4] = String("MagZ: \(magZ) G")
+            self.allData[5] = String("External temperature: \(tempExternal) °C")
+            self.allData[6] = String("External light: \(lightExternal) Lux")
+            self.allData[7] = String("External humidity: \(humidityExternal) %")
+            self.allData[8] = String("Differential CH1: \(differentialPotentialCH1) uV")
+            self.allData[9] = String("Differential CH2: \(differentialPotentialCH2) uV")
+            self.allData[10] = String ("RF Power Emission: \(RFpowerEmission)")
+            self.allData[11] = ("Transpiration: \(transpiration) %")
+            self.allData[12] = String("Air Pressure: \(airPressure) mBar")
+            self.allData[13] = String("Soil Moisture: \(soilMoisture)")
+            self.allData[14] = String("Soil Temperature: \(soilTemperature) °C")
+            self.allData[15] = String("mu_mm: \(mu_mm)")
+            self.allData[16] = String("mu_id: \(mu_id)")
+            self.tableView2.reloadData()
+            
+            if (characteristic.uuid) == CBUUID(string: "FA2AF5EC-E01F-11EC-9D64-0242AC120002"){
+                print("I READ WRITE VALUE")
+                let currentValue = characteristic.value
+                let decodedString = String(bytes: currentValue!, encoding: .utf8)
+            }
+        }
+        //let value = [UInt8] (characteristic.value!)
+        //print("Trenutna vrijednost DEBUG RAW GATT DATA:\(currentValue)")
+        //let newValue = ((Int16(value[0])))
+        //let newHumidValue = ((Int16(value[1])))
+        //let intValue = Int(newValue)
+        // print("Trenutna vrijednost DEBUG DECOUPLE:\(intValue)")
+        // let interestedInValue=intValue
+        //print("Trenutna vrijednost DEBUG DECODE:\(interestedInValue)")
+        //print("Samo Humidty debuged:\(newHumidValue)")
+        //let newPressureValue1 = ((Int16(value[2])))
+        //let fixedPressureValue = "10" + String(newPressureValue1)
+        //currentTemperature = interestedInValue
+        //temperatureToShowLabel.text = String(interestedInValue) + " °C"
+        //humidityToShowLabel.text = String(newHumidValue) + " %"
+        //pressureToShowLabel.text = String(fixedPressureValue) + " hPa"
     }
     
     //FUNKCIJE ZA iBeacon LOKACIJU
     
     
-    
+    @IBOutlet weak var greenhouseSwitch: UISwitch!
+    @IBAction func switchDidChange(_ sender: UISwitch){
+        if sender.isOn{
+            stateOfDoors="1"
+            print("ON")
+            wPeripheral.writeValue(stateOfDoors.data(using: .utf8)!, for: wCharacteristic, type: .withResponse)
+            wPeripheral.readValue(for: wCharacteristic)
+            greenHouseDoorStatus.text = "OPEN"
+        } else {
+            stateOfDoors="0"
+            print("OFF")
+            wPeripheral.writeValue(stateOfDoors.data(using: .utf8)!, for: wCharacteristic, type: .withResponse)
+            wPeripheral.readValue(for: wCharacteristic)
+            greenHouseDoorStatus.text = "CLOSED"
+        }
+    }
 
-    @IBOutlet weak var pressureToShowLabel: UILabel!
-    @IBOutlet weak var humidityToShowLabel: UILabel!
+    @IBOutlet weak var greenHouseDoorState: UILabel!
     @IBOutlet weak var nameToShowLabel: UILabel!
-    @IBOutlet weak var temperatureToShowLabel: UILabel!
+    @IBOutlet weak var greenHouseDoorStatus: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView1.delegate = self
+        tableView1.dataSource = self
+        
+        tableView2.delegate = self
+        tableView2.dataSource = self
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
         
@@ -155,12 +230,22 @@ extension ViewController: UITableViewDelegate{
 }
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print (deviceNames.count)
-        return deviceNames.count
+        if tableView == tableView1{
+            return deviceNames.count
+        }
+        print(allData.count)
+        return allData.count
         }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = deviceNames[indexPath.row]
-        return cell
+        if tableView == tableView1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = deviceNames[indexPath.row]
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text=allData[indexPath.row]
+            return cell
+        }
     }
 }
