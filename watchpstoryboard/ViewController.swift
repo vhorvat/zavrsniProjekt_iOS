@@ -18,9 +18,9 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     var myPeripheral: CBPeripheral!
     let notifCenter = UNUserNotificationCenter.current()
     var allBluetoothPeripherals = [CBPeripheral]()
-    
     let arrayOfServices: [CBUUID] = [CBUUID(string:"5701")]
     let arrayOfProbabilities = ["No stimulus", "Wind", "Temperature", "Blue light", "Red light"]
+    var lastValue = 0
     
     func scheduleNotification(){
         let content = UNMutableNotificationContent()
@@ -33,6 +33,20 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
         notifCenter.add(request) { (error) in
                 }
+    }
+    
+    func scheduleWindNotification(){
+        let content = UNMutableNotificationContent()
+        content.title = "Watchplant AI"
+        content.body = "Wind detected"
+        let date = Date().addingTimeInterval(1)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        notifCenter.add(request) { (error) in
+                }
+        
     }
     
     
@@ -63,6 +77,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             centralManager.connect(peripheral, options: nil)
             allBluetoothPeripherals.append(peripheral)
             scheduleNotification()
+            lastValue=0
         }
     }
     
@@ -97,8 +112,12 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
         let seconds = calendar.component (.second, from: date)
-        rawDataLabel.text = String(hour)+":"+String(minutes)+":"+String(seconds) //NEED EDIT
-        interpretedDataLabel.text = arrayOfProbabilities[value] //NEED EDIT
+        rawDataLabel.text = String(hour)+":"+String(minutes)+":"+String(seconds)
+        if (value == 1) && !(lastValue==1){
+            scheduleWindNotification()
+            lastValue=1
+        }
+        interpretedDataLabel.text = arrayOfProbabilities[value] 
         
     }
     
