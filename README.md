@@ -3,3 +3,5 @@
 
 
 Original application that works with STM32WB55 microcontroller code published in my GitHub repository
+
+Branched into WP_00_AI used for Watchplant project and RPi version.
